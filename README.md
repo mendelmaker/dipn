@@ -1,9 +1,9 @@
-#ToDo
-##inference with single image
+# ToDo
+## inference with single image
 
-##docker
+## docker
 
-##DIPN-ROS
+## DIPN-ROS
 
 
 # DIPN: Deep Interaction Prediction Network with Application to Clutter Removal

@@ -1,3 +1,11 @@
+#ToDo
+##inference with single image
+
+##docker
+
+##DIPN-ROS
+
+
 # DIPN: Deep Interaction Prediction Network with Application to Clutter Removal
 
 We propose a Deep Interaction Prediction Network (DIPN) for learning to predict complex interactions that ensue as a robot end-effector pushes multiple objects, whose physical properties, including size, shape, mass, and friction coefficients may be unknown a priori. DIPN "imagines" the effect of a push action and generates an accurate synthetic image of the predicted outcome. DIPN is shown to be sample efficient when trained in simulation or with a real robotic system. The high accuracy of DIPN allows direct integration with a Grasp Network (GN), yielding a robotic manipulation system capable of executing challenging clutter removal tasks while being trained in a fully self-supervised manner. The overall network demonstrates intelligent behavior in selecting proper actions between push and grasp for completing clutter removal tasks and significantly outperforms the previous state-of-the-art [VPG](https://github.com/andyzeng/visual-pushing-grasping).

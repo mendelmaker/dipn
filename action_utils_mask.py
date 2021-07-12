@@ -1,3 +1,10 @@
+'''
+called by push_main.py to return network outputs
+functions:
+    class Predictor()
+    def sample_actions()
+    def from_maskrcnn()
+'''
 import cv2
 import imutils
 import math

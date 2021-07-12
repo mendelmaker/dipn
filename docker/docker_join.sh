@@ -5,7 +5,7 @@
 
 BASH_OPTION=bash
 
-IMG=argsis/dipn
+IMG=argsis/dipn:latest
 
 xhost +
 containerid=$(docker ps -aqf "ancestor=${IMG}") && echo $containerid

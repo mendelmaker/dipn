@@ -47,7 +47,7 @@ docker run \
     -e DISPLAY=$DISPLAY \
     -e QT_X11_NO_MITSHM=1 \
     -e XAUTHORITY=$XAUTH \
-    -v "/home/$USER/sis2021_final:/home/sis/sis2021_final" \
+    -v "/home/$USER/dipn:/home/sis/dipn" \
     -v "$XAUTH:$XAUTH" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
@@ -57,5 +57,5 @@ docker run \
     --privileged \
     --security-opt seccomp=unconfined \
     $DOCKER_OPTS \
-    argsis/dipn \
+    argsis/dipn:latest \
     $BASH_OPTION

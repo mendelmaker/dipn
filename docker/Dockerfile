@@ -1,4 +1,6 @@
 FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+FROM osrf/ros:melodic-desktop
+FROM python:3.8.5
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
@@ -8,7 +10,7 @@ ENV ROS_DISTRO melodic
 ###################################### user #####################################
 
 ENV SHELL=/bin/bash \
-    USER=paul \
+    USER=sis \
     UID=1000 \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8
@@ -31,19 +33,19 @@ RUN apt-get update && apt-get install -y \
     sudo \
     software-properties-common \
     git \
+    cmake \
+    make \
     vim \
     build-essential \
     libblkid-dev \
     e2fslibs-dev \
     libboost-all-dev \
     libaudit-dev \
-    tzdata \
-    python-pip \
-    python3-pip 
+    tzdata 
 
 
 ##################################### Pytorch ######################################
-RUN python3 -m pip install -U pip 
+#RUN python3 -m pip install -U pip 
 
 RUN pip3 install matplotlib \
     numpy \
@@ -54,6 +56,7 @@ RUN pip3 install matplotlib \
     shapely \
     tensorboard \
     imutils \
+    Cython \
     pycocotools
 
 RUN python3 -m pip install \
@@ -70,9 +73,9 @@ ENV NVIDIA_VISIBLE_DEVICES=all
 ENV NVIDIA_DRIVER_CAPABILITIES=all
 
 # setup entrypoint
-COPY ./ros_entrypoint.sh /
+#COPY ./ros_entrypoint.sh /
 
-ENTRYPOINT ["/ros_entrypoint.sh"]
+#ENTRYPOINT ["/ros_entrypoint.sh"]
 
 USER ${USER}
 

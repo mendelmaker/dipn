@@ -5,6 +5,7 @@ runs/*
 hard-cases/*
 .vscode/*
 figures/*
+dataset/*
 
 *.pyc
 *__pycache__*

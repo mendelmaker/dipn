@@ -1,4 +1,5 @@
-FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+FROM nvcr.io/nvidia/cuda:10.2-runtime-ubuntu18.04
+#FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
 FROM osrf/ros:melodic-desktop
 FROM python:3.8.5
 

@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --rm -t argsis/dipn .
+docker build --rm -t argsis/dipn:latest .

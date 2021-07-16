@@ -340,7 +340,7 @@ if __name__ == "__main__":
     # color_image = cv2.imread("logs/temp/data/color-heightmaps/000001.0.color.png")
     # color_image = cv2.imread("logs/real-maskrcnn/data/color-heightmaps/000002.0.color.png")
     # color_image = cv2.imread("logs/old/object-detection-data/data/color-heightmaps/000001.0.color.png")
-    color_image = cv2.imread("data/real-data/data/color-heightmaps/000000.0.color.png")
+    color_image = cv2.imread("dataset/logs/real-data/data/color-heightmaps/000000.0.color.png")
     # color_image = cv2.imread("logs/vpg+&pp/p104/data/color-heightmaps/000001.0.color.png")
     color_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB)
     # color_image_after = cv2.cvtColor(color_image_after, cv2.COLOR_BGR2RGB)
@@ -349,7 +349,7 @@ if __name__ == "__main__":
     # depth_image = cv2.imread("logs_push/push-test/data/depth-heightmaps/0003308.depth.png", cv2.IMREAD_UNCHANGED)
     # depth_image = cv2.imread("logs/real-maskrcnn/data/depth-heightmaps/000002.0.depth.png", cv2.IMREAD_UNCHANGED)
     # depth_image = cv2.imread("logs/old/object-detection-data/data/depth-heightmaps/000001.0.depth.png", cv2.IMREAD_UNCHANGED)
-    depth_image = cv2.imread("data/real-data/data/depth-heightmaps/000000.0.depth.png", cv2.IMREAD_UNCHANGED)
+    depth_image = cv2.imread("dataset/logs/real-data/data/depth-heightmaps/000000.0.depth.png", cv2.IMREAD_UNCHANGED)
     # depth_image = cv2.imread("logs/vpg+&pp/p104/data/depth-heightmaps/000001.0.depth.png", cv2.IMREAD_UNCHANGED)
     depth_image = depth_image.astype(np.float32) / 100000
 
@@ -379,13 +379,14 @@ if __name__ == "__main__":
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     # predictor = Predictor("logs_push/final/data/5cm/20push_prediction_model_test_5.pth")
-    predictor = Predictor("logs_push/15push_prediction_model_test_5.pth")
+    predictor = Predictor("dataset/logs_push/15_push_prediction_model.pth")
     # predictor = Predictor("logs_push/old/new/data/push_prediction_model_test_5.pth")
+    #trainer = Trainer('reinforcement', 0, 0, True, True, 'logs/paper result/grasp-only/models/snapshot-000400.reinforcement.pth', False)
     trainer = Trainer('reinforcement', 0, 0, True, True,
-                      'logs/paper result/grasp-only/models/snapshot-000400.reinforcement.pth', False)
+                      'dataset/logs/GN/model/models/snapshot-000500.reinforcement.pth', False)
     model = get_model_instance_segmentation(2)
     # model.load_state_dict(torch.load("data/real-data/data/maskrcnn.pth"))
-    model.load_state_dict(torch.load("logs/maskrcnn.pth"))
+    model.load_state_dict(torch.load("dataset/logs/random-maskrcnn/data/maskrcnn.pth"))
     model = model.to(device)
 
     mask_objs = from_maskrcnn(model, color_image, device, True)

@@ -100,7 +100,7 @@ class Predictor():
                 mask = i_rotated_mask_objs[i_sort_idx[pi]]
                 points = np.argwhere(mask == 255)
                 points = np.expand_dims(points, axis=0)
-                M = cv2.getRotationMatrix2D((i_prev_poses[pi * 2 + 1], i_prev_poses[pi * 2]), -i_output[pi * 3 + 2], 1)
+                M = cv2.getRotationMatrix2D((float(i_prev_poses[pi * 2 + 1]), float(i_prev_poses[pi * 2])), -i_output[pi * 3 + 2], 1)
                 M[0, 2] += i_output[pi * 3 + 1]
                 M[1, 2] += i_output[pi * 3]
                 new_points = cv2.transform(points, M)

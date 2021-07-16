@@ -3,6 +3,8 @@ FROM nvcr.io/nvidia/cuda:10.2-runtime-ubuntu18.04
 FROM osrf/ros:melodic-desktop
 FROM python:3.8.5
 
+MAINTAINER Paul <mendelmaker@gmail.com>
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
@@ -53,7 +55,7 @@ RUN pip3 install matplotlib \
     scipy \
     pillow \
     scikit-image \
-    opencv-python \
+    opencv-python-headless \
     shapely \
     tensorboard \
     imutils \

@@ -10,6 +10,7 @@ dataset/*
 *.pyc
 *__pycache__*
 
+*.png
 visualization.push.png
 visualization.grasp.png
 

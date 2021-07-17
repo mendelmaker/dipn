@@ -1,24 +1,20 @@
-# Making GPU docker image
-*You should run this code on a GPU computer*
-
-dependencies: 
-- CUDA 10.2
-- Python 3.6
-- Python 2.7
-- Pytorch 1.6.0
-- ROS(Melodic)
+**Dependencies**
+- CUDA: 10.2
+- ROS: melodic
+- Python: 3.8.5
+- Pytorch: 1.6
 
 **Building docker image**
 ```
     $ source build.sh
 ```
 
-**How to run**
+**Run the container**
 ```
     $ source docker_run.sh
-    Docker $ source environment.sh
+    #Docker $ source environment.sh
 ```
-**If you want to enter same container**
+**Join the container**
 ```
     $ source docker_join.sh
     Docker $ source environment.sh

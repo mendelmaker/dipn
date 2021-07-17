@@ -2,7 +2,10 @@
 ## inference with single image
 
 ## docker
-base image: nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+- CUDA: 10.2
+- ROS: melodic
+- Python: 3.8.5
+- Pytorch: 1.6
 
 ## DIPN-ROS
 

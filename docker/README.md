@@ -1,7 +1,7 @@
 **Dependencies**
 - CUDA: 10.2
 - ROS: melodic
-- Python: 3.8.5
+- Python: 3.8.11
 - Pytorch: 1.6
 
 **Building docker image**

@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="dipn_ros" type="robot_ros.py" name="robot_to_rostopic_node"></node>
+
+</launch>

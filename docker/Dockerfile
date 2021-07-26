@@ -76,7 +76,8 @@ RUN apt-get update && apt-get install -y \
     libboost-all-dev \
     libaudit-dev \
     tzdata \
-    python3-pip
+    python3-pip \
+    jupyter-core
 
 ###################################### Python #####################################
 RUN apt-get install -y build-essential \
